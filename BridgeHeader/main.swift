@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
+var numbers: [Int32] = [3, 7, 4, 8, 5]
+var n: Int32 = Int32(numbers.count)
 
+print("-----------------")
+print(sorter(&numbers, n))
+print("-----------------")

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A6D80D522E0DECD00945F0A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D80D422E0DECD00945F0A /* main.swift */; };
+		4A6D80DE22E0DEEB00945F0A /* sorter.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D80DD22E0DEEB00945F0A /* sorter.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		4A6D80D122E0DECD00945F0A /* BridgeHeader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BridgeHeader; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D80D422E0DECD00945F0A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4A6D80DB22E0DEEA00945F0A /* BridgeHeader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BridgeHeader-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A6D80DC22E0DEEB00945F0A /* sorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sorter.h; sourceTree = "<group>"; };
+		4A6D80DD22E0DEEB00945F0A /* sorter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sorter.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				4A6D80D422E0DECD00945F0A /* main.swift */,
+				4A6D80DC22E0DEEB00945F0A /* sorter.h */,
+				4A6D80DD22E0DEEB00945F0A /* sorter.c */,
+				4A6D80DB22E0DEEA00945F0A /* BridgeHeader-Bridging-Header.h */,
 			);
 			path = BridgeHeader;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 				TargetAttributes = {
 					4A6D80D022E0DECD00945F0A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -119,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6D80DE22E0DEEB00945F0A /* sorter.c in Sources */,
 				4A6D80D522E0DECD00945F0A /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,9 +253,18 @@
 		4A6D80D922E0DECD00945F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = B4FXKBHXYA;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BridgeHeader/BridgeHeader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,9 +272,17 @@
 		4A6D80DA22E0DECD00945F0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = B4FXKBHXYA;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BridgeHeader/BridgeHeader-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
