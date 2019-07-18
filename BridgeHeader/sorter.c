@@ -18,7 +18,6 @@ void sorter(int *arr, int size) {
             }
         }
     }
-    //    return *arr;
 }
 
 
