@@ -8,13 +8,17 @@
 
 #include "sorter.h"
 
-int sorter(int *arr, int size) {
+void sorter(int *arr, int size) {
     for (int i = 0; i < 10; i++) {
-        if (arr[i] > arr[i + 1]) {
-            int temp = arr[i];
-            arr[i] = arr[i + 1];
-            arr[i + 1] = temp;
+        for (int j = i + 1; j < size; j++) {
+            if (arr[i] > arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
     }
-    return *arr;
+    //    return *arr;
 }
+
+

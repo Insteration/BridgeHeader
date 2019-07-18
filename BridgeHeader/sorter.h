@@ -9,7 +9,7 @@
 #ifndef sorter_h
 #define sorter_h
 
-int sorter(int *arr, int size);
+void sorter(int *arr, int size);
 
 #include <stdio.h>
 
